@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/authuser-microservice/authuser.iml" filepath="$PROJECT_DIR$/authuser-microservice/authuser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/course-microservice/course.iml" filepath="$PROJECT_DIR$/course-microservice/course.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/distance-learning.iml" filepath="$PROJECT_DIR$/.idea/distance-learning.iml" />
+    </modules>
+  </component>
+</project>

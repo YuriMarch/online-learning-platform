@@ -1,0 +1,41 @@
+server:
+  port: 8080
+  servlet:
+    context-path: '/distancelearning-authuser/'
+
+spring:
+  application:
+    name: distancelearning-authuser-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/distancelearning-authuser
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  output:
+    ansi:
+      enabled: Always
+
+logging:
+  level:
+    com.distancelearning: TRACE
+    root: INFO
+    org.springframework.web: DEBUG
+    org.hibernate: INFO
+
+distancelearning:
+  api:
+    url:
+      course: 'http://distancelearning-course-service/distancelearning-course'
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: 'http://localhost:8761/eureka'
+  instance:
+    hostname: localhost

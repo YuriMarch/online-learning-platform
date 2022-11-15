@@ -1,0 +1,24 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: distancelearning-api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: authuser-service
+          uri: lb://DISTANCELEARNING-AUTHUSER-SERVICE
+          predicates:
+            - Path=/distancelearning-authuser/**
+        - id: course-service
+          uri: lb://DISTANCELEARNING-COURSE-SERVICE
+          predicates:
+            - Path=/distancelearning-course/**
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: 'http://localhost:8761/eureka'
+  instance:
+    hostname: localhost
